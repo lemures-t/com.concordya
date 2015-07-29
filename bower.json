@@ -1,0 +1,25 @@
+{
+  "name": "com.concordya",
+  "version": "0.0.0",
+  "authors": [
+    "concordya"
+  ],
+  "description": "The Offical Site of Concordya",
+  "keywords": [
+    "concordya"
+  ],
+  "license": "MIT",
+  "homepage": "www.concordya.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.9.1",
+    "fullpage.js": "~2.6.7",
+    "fontawesome": "~4.4.0"
+  }
+}

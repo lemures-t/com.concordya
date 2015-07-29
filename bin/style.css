@@ -1,0 +1,522 @@
+@charset "utf-8";
+/* Reset CSS
+ * --------------------------------------- */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+table {
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-weight: normal;
+  font-style: normal;
+}
+strong {
+  font-weight: bold;
+}
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  color: #444;
+}
+q:before,
+q:after {
+  content: '';
+}
+abbr,
+acronym {
+  border: 0;
+}
+body {
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+}
+/*
+Concordya Design Element
+*/
+body {
+  padding-top: 68px;
+}
+.wrap {
+  margin: 0 auto;
+  width: 960px;
+  position: relative;
+  height: 100%;
+}
+.clearfloat {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.wrap:after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.MENU_ACTIVE {
+  border-bottom: 3px solid #65e5f2;
+}
+.MENU_ACTIVE a {
+  color: #65e5f2;
+}
+#top-nav {
+  background-color: #2b2f39;
+  height: 68px;
+  position: fixed;
+  top: 0;
+  z-index: 70;
+  width: 100%;
+}
+#top-nav .wrap {
+  line-height: 68px;
+}
+#top-nav .wrap img {
+  vertical-align: middle;
+}
+#top-nav .wrap .logo-words {
+  margin-left: 10px;
+}
+#top-nav .wrap #menu {
+  margin: 0 100px;
+  display: inline;
+}
+#top-nav .wrap #menu .active {
+  border-bottom: 3px solid #65e5f2;
+}
+#top-nav .wrap #menu .active a {
+  color: #65e5f2;
+}
+#top-nav .wrap #menu li {
+  height: 65px;
+  display: inline-block;
+  margin-left: 50px;
+  color: #ffffff;
+  width: 80px;
+  text-align: center;
+}
+#top-nav .wrap #menu li:hover {
+  border-bottom: 3px solid #65e5f2;
+}
+#top-nav .wrap #menu li:hover a {
+  color: #65e5f2;
+}
+#top-nav .wrap #menu li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+#top-nav .wrap .btn {
+  border: 1px solid #4ebbc6;
+  background-color: trasparent;
+  color: #4ebbc6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 5px 10px;
+  cursor: pointer;
+  opacity: 10;
+}
+#top-nav .wrap .btn:hover {
+  color: #eeeeee;
+  background-color: #4ebbc6;
+}
+.footer {
+  background-color: #353946;
+}
+.footer h1 {
+  color: #ffffff;
+  font-weight: bold;
+}
+.footer ul li {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: bold;
+}
+.footer .footer-navi {
+  float: left;
+}
+.footer .footer-navi .more {
+  color: #a0a1a4;
+  font-size: 13px;
+  font-weight: normal;
+}
+.footer .footer-navi a {
+  color: #a0a1a4;
+}
+.footer .footer-navi li {
+  margin-right: 40px;
+  width: 70px;
+}
+.footer .footer-navi .sitemap .detail {
+  display: block;
+}
+.footer .footer-navi .contact span[class^="icon-"] {
+  margin-right: 5px;
+  font-size: 18px;
+}
+.footer .footer-navi .row {
+  margin-top: 25px;
+}
+.footer .friends {
+  float: right;
+}
+.footer .friends ul {
+  margin-top: 40px;
+}
+.footer .friends li {
+  vertical-align: middle;
+  margin-right: 40px;
+}
+.footer .friends li span {
+  display: none;
+}
+.footer .concordya {
+  margin-top: 45px;
+  text-align: center;
+}
+.footer .concordya > * {
+  vertical-align: middle;
+}
+.footer .concordya .line {
+  display: inline-block;
+  height: 30px;
+  width: 420px;
+  border-bottom: 1px solid #a0a1a4;
+}
+.footer .rcinfo {
+  margin-top: 45px;
+  color: #c9c9c9;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+/*
+Templates not for Index
+*/
+.banner {
+  box-sizing: border-box;
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  padding-top: 70px;
+  border-bottom: 5px solid #65e5f2;
+}
+.banner h1 {
+  color: #ffffff;
+  font-size: 50px;
+  letter-spacing: 10px;
+}
+.banner .indicator {
+  color: #ffffff;
+  margin-top: 20px;
+  font-size: 20px;
+}
+/*footer not index page*/
+.general.footer {
+  padding: 60px 0 30px;
+}
+/* 
+*
+*	Index Page
+*
+*/
+#section0 .slide {
+  background-color: #353946;
+}
+#section0 .slide img {
+  position: absolute;
+}
+/*
+since slide has the width for percentage value(like 25% for 4 slides),
+we need a wrap element to wrap the current slide width,
+in order to easier position style
+*/
+.slide .wrap {
+  margin: 0 auto;
+  width: 960px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+#slide1 {
+  background: url("../src/assets/s1_back.png") no-repeat center right;
+  /* For Media Query*/
+}
+#slide2 {
+  background: url("../src/assets/s2_cloud.png") no-repeat center right;
+}
+#slide3 {
+  background: url("../src/assets/s3_arrow.png") no-repeat center center;
+}
+#slide3 .news {
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  padding-top: 40px;
+  padding-left: 100px;
+}
+#slide3 .news a {
+  color: #65e5f2;
+}
+#slide3 .news a > * {
+  vertical-align: middle;
+}
+#slide3 img {
+  position: static!important;
+}
+#slide3 .star_wrap,
+#slide3 .youth_wrap {
+  position: absolute;
+}
+#slide4 {
+  background: url("../src/assets/s4_mac.png") no-repeat center center;
+}
+#slide4 .release_wrap {
+  text-align: center;
+  position: absolute;
+  color: #65e5f2;
+  font-size: 30px;
+}
+#slide4 .release_wrap > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+#slide4 .release_wrap img {
+  position: static !important;
+}
+#slide4 .release_wrap a {
+  color: #65e5f2;
+  vertical-align: bottom;
+}
+.info .wrap {
+  display: table;
+}
+.info .wrap > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+.info .wrap .intro h1 {
+  font-size: 50px;
+  color: #2b2f39;
+}
+.info .wrap .intro h2 {
+  font-size: 30px;
+  color: #000000;
+}
+.info .wrap .intro p {
+  font-size: 20px;
+  color: #000;
+}
+.odd {
+  background-color: #eeeeee;
+  text-align: left;
+}
+.odd .intro {
+  padding-left: 50px;
+}
+.even {
+  text-align: right;
+}
+.even .intro {
+  padding-right: 50px;
+}
+#section5 .wrap {
+  position: relative;
+}
+#section5 .wrap .vertical-wrap {
+  height: 450px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  margin: auto;
+}
+/* Guidance Page */
+.guidance {
+  background: url('../src/assets/grain.png') no-repeat center center;
+  background-size: auto 250px;
+  background-color: #353946;
+}
+/*less for bubble*/
+/*call less for bubble*/
+.bubble-q {
+  width: 400px;
+  padding: 10px 15px;
+  background-color: #eeeeee;
+  position: relative;
+  -webkit-border-radius: 15px 15px 15px 0;
+  -moz-border-radius: 15px 15px 15px 0;
+  -ms-border-radius: 15px 15px 15px 0;
+  -o-border-radius: 15px 15px 15px 0;
+  border-radius: 15px 15px 15px 0;
+}
+.bubble-q:before {
+  content: "";
+  display: block;
+  border: 10px solid;
+  border-color: transparent #eeeeee #eeeeee transparent;
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+}
+.bubble-a {
+  width: 400px;
+  padding: 10px 15px;
+  background-color: #65e5f2;
+  position: relative;
+  -webkit-border-radius: 15px 15px 0 15px;
+  -moz-border-radius: 15px 15px 0 15px;
+  -ms-border-radius: 15px 15px 0 15px;
+  -o-border-radius: 15px 15px 0 15px;
+  border-radius: 15px 15px 0 15px;
+  margin: 10px 0 0 auto;
+}
+.bubble-a:before {
+  content: "";
+  display: block;
+  border: 10px solid;
+  border-color: transparent transparent #65e5f2 #65e5f2;
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+}
+.aq .item {
+  border-bottom: 1px dashed #65e5f2;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+.pre li {
+  text-align: center;
+  margin: 20px 0;
+}
+.pre span {
+  float: left;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.aq .item:last-child {
+  border-bottom: 0px;
+}
+/* About-us Page*/
+.about-us {
+  background: url('../src/assets/china-cloud.png') no-repeat center center;
+  background-size: auto 250px;
+  background-color: #353946;
+}
+.introduction {
+  margin: 50px 0;
+}
+.introduction .content-wrap {
+  margin: 10px 0;
+}
+.introduction .title {
+  font-size: 25px;
+  padding: 10px 0 2px 20px;
+  border-bottom: 2px solid #eeeeee;
+}
+.introduction .main {
+  padding: 30px 20px 0;
+}
+.introduction .main p {
+  text-indent: 33px;
+  margin-bottom: 30px;
+  text-align: justify;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+}
+.introduction .main ul {
+  text-align: center;
+}
+.introduction .main ul li {
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 10px;
+}
+/*
+* Change default CSS
+*/
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #ffffff !important;
+}
+/* Custom CSS
+ * --------------------------------------- */
+/****/
+/* Style for our header texts
+	* --------------------------------------- */
+/* Centered texts in each section
+	* --------------------------------------- */
+/* Defining each section background and styles
+	* --------------------------------------- */
+/*Adding background for the slides
+	* --------------------------------------- */
