@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="keywords" content="Concordya GuanPlus FinanceCloud SASS 有序 管+ 财务云"/>
-	<meta name="description" content="管家介绍 有序团队 使用指南 试用体验">
+	<meta name="keywords" content="Concordya GuanPlus FinanceCloud SASS 有序 有序科技 管+ 财务云"/>
+	<meta name="description" content="Guan+ - Online Accounting for China's SMEs">
 	<title>User Guide - Concordya</title>
 	<!-- dev:css -->
 	<!-- endinject -->
-
-	<!-- release:css -->
-	<link rel="stylesheet" href="css/39370bfe6f1b1154cfd9d6d0b6e05b9b.css">
+	<!-- release-lib:css -->
 	<link rel="stylesheet" href="lib/fontello.css">
+	<link rel="stylesheet" href="lib/jquery.fullPage.css">
+	<!-- endinject -->
+	<!-- release:css -->
+	<link rel="stylesheet" href="css/b53f7f043e4292d0e8fd1647550229fe.css">
 	<!-- endinject -->
 
 	<link rel="icon" type="image/png" href="./assets/logo.png">
@@ -21,128 +23,198 @@
 			<img class="logo" src="./assets/logo.png" alt="logo"/>
 			<img class="logo-words" src="./assets/logo-words.png" alt="logo-words"/>
 			<ul id="menu">
-				<li><a href="./index.html">首页</a></li>
-				<li class="active"><a href="./guidance.html">用户指南</a></li>
-				<li><a href="./about-us.html">关于我们</a></li>
+				<li>
+					<a href="./index.html">
+					首页
+					<span class="ripple_wrap"><span class="ripple"></span></span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="guidance.html">
+					用户指南
+					<span class="ripple_wrap"><span class="ripple"></span></span>
+					</a>
+<!-- 					<ul class="sub">
+						<li>
+							<a href="#">
+							价格
+							<span class="ripple_wrap"><span class="ripple"></span></span>
+							</a>
+						</li>
+						<li>
+							用户指南
+							<span class="ripple_wrap"><span class="ripple"></span></span>
+						</li>
+					</ul> -->
+				</li>
+				<li>
+					<a href="about-us.html">
+					关于我们
+					<span class="ripple_wrap"><span class="ripple"></span></span>
+					</a>					
+					<ul class="sub">
+						<li>
+							<a href="about-us.html#_news">新闻发布
+							<span class="ripple_wrap"><span class="ripple"></span></span>
+							</a>
+						</li>
+						<li>
+							<a href="about-us.html#_media">媒体报道
+							<span class="ripple_wrap"><span class="ripple"></span></span>
+							</a>
+						</li>
+						<li>
+							<a href="about-us.html#_contact">简介 &amp; 加入
+							<span class="ripple_wrap"><span class="ripple"></span></span>
+							</a>
+						</li>
+						<li>
+							<a href="about-us.html#_log">管 + 志
+							<span class="ripple_wrap"><span class="ripple"></span></span>
+							</a>
+						</li>
+					</ul>
+				</li>
 			</ul>
-			<a class="btn" href="https://app.guanplus.com">欢迎体验</a>
+			<span class="btn" href="#">欢迎体验</span>
+			<div class="qr_wrap">
+					<img class="qrcode" src="./assets/qrcode.png"/>
+					关注并直接给我们留言<br/>我们将及时联系您
+			</div>
 		</div>
 	</div>	
 	<div class="guidance banner">
-		<h1 class="title"> 用户指南 </h1>
-		<img class="ad-line" src="./assets/ad-line.png" alt="ad-line" />
-		<p class="indicator">新手入门 · 问题汇总</p>
+		<div class="mask"></div>
+		<!-- <h1 class="title"><img src="./assets/logo-words@2x.png"/></h1> -->
+		<!-- <p class="indicator">懂机器学习的财务云，管理随心，享受飞一般的自由</p> -->
+		<h1 class="title">懂机器学习的财务云，管理随心，享受飞一般的自由</h1>
 	</div>
-	<div class="aq">
-		<div class="wrap">
-			<div class="item" id="aq1">
-				<div class="bubble-q">Q1：您的系统与传统软件操作方式上有所差异， 请问如何进行记账操作？</div>
-				<div class="bubble-a">A1：操作步骤 -> 财务管理 -> 凭证列表 -> 新增凭证</div>
-				<ul class="pre clearfix">
-					<li class="p1">
-						<span>第一步，选中财务管理</span>
-						<img src="./assets/q1s1.png" alt="step1">
-					</li>
-					<li class="p2">
-						<span>第二步，选择凭证列表</span>
-						<img src="./assets/q1s2.png" alt="step2">
-					</li>
-					<li class="p3">
-						<span>第三步，进入列表后，即可进行记账</span>
-					</li>
-				</ul>
+	<div class="guidance-content">
+		<div class="basic">
+			<div class="wrap">
+				<h1>产品用户指南－基础操作</h1>
+				<p>基本操作页面共分为四个标签：首页，财务管理，报表和基础设置</p>
+				<img class="introduction" src="./assets/introduction.png" alt="intro" />
+				<img class="main" src="./assets/main.png" alt="intro" />
 			</div>
-			<div class="item" id="aq2">
-				<div class="bubble-q">Q2：部门核算在哪里进行设置？</div>
-				<div class="bubble-a">A2：基础设置中可以进行公司信息、部门维护、客户管理、 商品管理、用户管理以及辅助核算进行设置。</div>
-				<ul class="pre clearfix">
-					<li class="p1"><img src="./assets/q2s1.png" alt="step1"></li>
+		</div>
+		<div class="specs">
+				<h1>管＋会根据企业内的不同职责开通相应权限</h1>
+				<p>目前系统支持三个主要用户角色：财务，总经理和管理员</p>
+				<ul class="tab-s top">
+					<li class="active finance-tab">财务</li>
+					<li class="director-tab">总经理</li>
+					<li class="admin-tab">管理员</li>
 				</ul>
-			</div>
-			<div class="item" id="aq3">
-				<div class="bubble-q">Q3：如何新添公司会计及相关人员进入本企业？</div>
-				<div class="bubble-a">A3：基础设置 -> 用户管理 -> 用户邀请</div>
-				<ul class="pre clearfixs">
-					<span>提醒：只有管理员与总经理权限可以设置相关部门信息维护。</span>
-					<li class="p1">
-						<img src="./assets/q3s1.png" alt="step1">
-					</li>
-					<li class="p2">
-						<img src="./assets/q3s2.png" alt="step2">
-					</li>
+				<div class="tab-content-s">
+					<div class="active" id="finance">
+						<h2>财务角色主要功能简介</h2>
+						<div class="odd">
+							<div class="wrap">
+							<img src="./assets/finance-1.png" />
+							</div>
+						</div>
+						<div class="even">
+							<div class="wrap">
+							<img src="./assets/finance-2.png" />
+							</div>
+						</div>
+						<div class="odd">
+							<div class="wrap">
+							<img src="./assets/finance-3.png"  />
+							</div>
+						</div>
+					</div>
+					<div id="director">
+						<h2>总经理角色主要功能简介</h2>
+						<div class="odd">
+							<div class="wrap">
+							<img src="./assets/director.png" />
+							</div>
+						</div>
+					</div>
+					<div id="admin">
+						<h2>管理员角色主要功能简介</h2>
+						<div class="odd">
+							<div class="wrap">
+							<img src="./assets/admin-1.png" />
+							</div>
+						</div>
+						<div class="even">
+							<div class="wrap">
+							<img src="./assets/admin-2.png" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="tab-s bottom">
+					<li class="active finance-tab">财务</li>
+					<li class="director-tab">总经理</li>
+					<li class="admin-tab">管理员</li>
 				</ul>
-			</div>
-			<div class="item" id="aq4">
-				<div class="bubble-q">Q4：会计的操作界面都在哪里？</div>
-				<div class="bubble-a">A4：财务管理下列相关操作</div>
-				<ul class="pre">
-					<li class="p1">
-						<img src="./assets/q4s1.png" alt="step1">
-					</li>
-				</ul>
-			</div>
 		</div>
 	</div>
 	<div class="footer general">
-		<div class="wrap">
-			<div class="clearfix">
-			<div class="footer-navi">
-				<ul class="sitemap">
-					<li>首页<span class="detail more">管+介绍</span></li>
-					<li>用户指南<span class="detail more">使用说明</span></li>
-					<li>关于我们<span class="detail more">有序团队</span></li>
-				</ul>
-				<div class="contact row">
-					<h1>联系我们</h1>
-					<ul>
-						<li class="more">
-							<span class="icon-wechat"></span>
-							<!-- <a href="http://mp.weixin.qq.com/mp/getmasssendmsg?__biz=MzI1MzAwNzQ3Ng==#wechat_webview_type=1&wechat_redirect"> -->微信<!-- </a> -->
-						</li>
-						<li class="more">
-							<span class="icon-weibo"></span>
-							<a href="http://weibo.com/u/5650285189#1438170904161">微博</a>
-						</li>
-						<li class="more">
-							<span class="icon-mail-alt"></span>
-							<a href="mailto:contact@concordya.com">邮箱</a>
-						</li>
-					</ul>
-				</div>
-				<div class="cv row">
-					<h1>加入我们</h1>
-					<span class="more">
-						请发送简历至: 
-						<a href = "mailto:cherylshao@concordya.com">cherylshao@concordya.com</a>
-					</span>
-				</div>
-
-			</div>
-			<div class="friends">
-				<h1>合作伙伴</h1>
+		<div class="friends">
+			<div class="wrap">
+				<span class="head">合作伙伴</span>
 				<ul>
-					<li><img src="./assets/36Kr.png" alt="36Kr"><span>36Kr</span></li>
-					<li><img src="./assets/fh.png" alt="法海"><span>法海</span></li>
-				</ul>
-				<ul>
-					<li><img src="./assets/ucloud.png" alt="ucloud"><span>Ucloud</span></li>
-					<li><img src="./assets/ls.png" alt="猎上网"/><span>猎上</span></li>
-					<li><img src="./assets/zc.png" alt="智筹"/><span>智筹</span></li>
-				</ul>
-			</div>
-			</div>
-			<div class="concordya">
-				<span class="line"></span>
-				<img src="./assets/concordya.png"/>
-				<span class="line"></span>
-			</div>
-			<div class="rcinfo">
-				copyright © 有序科技 2014-2015
-					<br/> 
-				All Rights Reserved
+					<li><img id="icon-36Kr" src="./assets/friends/36Kr.png" alt="36Kr"><span>36Kr</span></li>
+					<li><img id="icon-fh" src="./assets/friends/fh.png" alt="法海"><span>法海</span></li>
+					<li><img id="icon-ucloud" src="./assets/friends/ucloud.png" alt="ucloud"><span>Ucloud</span></li>
+					<li><img id="icon-hunter" src="./assets/friends/hunter.png" alt="猎上网"/><span>猎上</span></li>
+					<li><img id="icon-zc" src="./assets/friends/zc.png" alt="智筹"/><span>智筹</span></li>
+					<li><img id="icon-coffee" src="./assets/friends/coffee.png" alt="十分咖啡"/><span>十分咖啡</span></li>
+					<li><img id="icon-dream" src="./assets/friends/dream.png" alt="梦想+"/><span>梦想+</span></li>
+				</ul>	
 			</div>
 		</div>
-	</div>	
+		<div class="footer-main clearfix">
+			<div class="wrap">
+				<div class="vertical-wrap">
+					<div class="clearfix">
+						<ul class="sitemap">
+							<li>首页<span class="detail more">管+ 介绍<br/>随手记<br/>随手审<br/>随手出<br/>随手控</span></li>
+							<li>用户指南<span class="detail more">使用说明</span></li>
+							<li>关于我们<span class="detail more">新闻发布<br/>媒体报道<br/>联系 &amp; 加入<br/>管+ 志</span></li>
+						</ul>
+						<div class="other">
+							<div class="contact">
+								<h1>联系我们</h1>
+								<ul>
+									<li class="more">
+										<span class="icon-weibo"></span>
+										<a href="http://weibo.com/u/5650285189#1438170904161">微博</a>
+									</li>
+									<li class="more">
+										<span class="icon-mail-alt"></span>
+										<a href="mailto:contact@concordya.com">邮箱</a>
+									</li>
+								</ul>
+							</div>
+							<div class="cv row">
+								<h1>加入我们</h1>
+								<span class="more">
+									请发送简历至: &nbsp; &nbsp;
+									<a href = "mailto:hr@guanplus.com">hr@guanplus.com</a>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="concordya">
+						<span class="line"></span>
+						<img src="./assets/concordya.png"/>
+						<span class="line"></span>
+					</div>
+					<div class="rcinfo">
+						copyright © 有序科技 2014-2015
+							<br/> 
+						All Rights Reserved
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
 	<!-- dev-jq:js -->
 	<!-- endinject -->
 	
@@ -150,12 +222,13 @@
 	<!-- endinject -->
 
 	<!-- release-lib:js -->
+	<script src="lib/jquery.min.js"></script>
+	<script src="lib/jquery.fullPage.min.js"></script>
 	<!-- endinject -->
 	
 	<!-- release:js -->
-	<script src="lib/jquery.min.js"></script>
+	<script src="js/afeb205587183250889391421eff1759.js"></script>
 	<!-- endinject -->
-
 
 </body>
 </html>

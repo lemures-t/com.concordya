@@ -1,0 +1,355 @@
+@url_img:"../src";//dev:"../src" build:"../dist""
+
+@wheel_url: "@{url_img}/assets/s2_wheel.png";
+@wheel_w: image-width(@wheel_url);
+@wheel_h: image-height(@wheel_url);
+
+@cloud_url:"@{url_img}/assets/s2_cloud.png";
+@cloud_w: image-width(@cloud_url);
+@cloud_h: image-height(@cloud_url);
+
+@title:"@{url_img}/assets/s2_title.png";
+@title-w:image-width(@title);
+@title-h:image-height(@title);
+
+@subtitle:"@{url_img}/assets/s2_subtitle.png";
+@subtitle-w:image-width(@subtitle);
+@subtitle-h:image-height(@subtitle);
+
+@guanplus_logo:"@{url_img}/assets/s3_guanplus_logo.png";
+@gp_w: image-width(@guanplus_logo);
+@gp_h: image-height(@guanplus_logo);
+
+
+
+// @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+// background-image: -webkit-image-set(url(/static/dist/images/logo_1x.png) 1x,url(/static/dist/images/logo_2x.png) 2x);
+@media screen and (min-width:960px){//1024
+	#slide2{
+		.title{
+			width:@title-w/1.5;
+			height:@title-h/1.5;
+		}
+		.subtitle{
+			width:@subtitle-w/1.4;
+			height:@subtitle-h/1.4;
+		}
+		.wheel{
+			width:@wheel_w/1.3;
+			height:@wheel_h/1.3;
+		}
+	}
+	#slide3{
+		.lt_upper{
+			top:-250px;
+			width:400px;
+			height:400px;
+		}
+		.lt_lower{
+			top:-250px;
+			width:450px;
+			height:450px;
+		}
+		.lb_upper{
+			width:450px;
+			height:420px;
+			bottom:-200px;
+			background-position: left 70px top 20px;
+		}
+		.lb_lower{
+			width:600px;
+			height:720px;
+			bottom:-500px;
+		}
+		.rt_upper{
+			width:450px;
+			height:500px;
+			top:-250px;
+			background-position: left 70px bottom 20px;
+		}
+		.rt_lower{
+			width:400px;
+			height:400px;
+			top:-135px;
+		}
+		.rb_upper{
+			width:400px;
+			height:400px;
+			bottom:-355px;
+		}
+		.rb_lower{
+			width:400px;
+			height:400px;
+			bottom:-314px;
+		}
+		.news{
+			&.star_wrap{
+				left:50px;
+			}
+			&.youth_wrap{
+				left:50px;
+			}
+		}
+		.guanplus_logo{
+			img{
+				width:@gp_w/1.1;
+				height:@gp_h/1.1;
+			}
+			bottom:350px;
+		}
+	}
+	#slide4{
+		.release_wrap{
+			right:4%;
+		}
+	}
+}
+
+@media screen and (min-width:1100px){//1280
+	#slide2{
+		background-size:@cloud_w/1.2 @cloud_h/1.2;
+		.title{
+			width:@title-w/1;
+			height:@title-h/1;
+		}
+		.subtitle{
+			width:@subtitle-w/1;
+			height:@subtitle-h/1;
+		}
+		.wheel{
+			width:@wheel_w/1.4;
+			height:@wheel_h/1.4;
+		}
+	}
+	#slide3{
+		.lt_upper{
+			top:-400px;
+			width:500px;
+			height:500px;
+		}
+		.lt_lower{
+			top:-400px;
+			width:550px;
+			height:550px;
+		}
+		.lb_upper{
+			width:650px;
+			height:650px;
+			bottom:-350px;
+			background-position: left 120px top 20px;
+		}
+		.lb_lower{
+			width:780px;
+			height:900px;
+			bottom:-700px;
+		}
+		.rb_upper{
+			width:400px;
+			height:400px;
+			bottom:-355px;
+		}
+		.rb_lower{
+			width:400px;
+			height:400px;
+			bottom:-314px;
+		}
+		.rt_upper{
+			width:550px;
+			height:600px;
+			top:-300px;
+			background-position: left 120px bottom 20px;
+		}
+		.rt_lower{
+			width:500px;
+			height:500px;
+			top:-185px;
+		}
+		.news{
+			&.star_wrap{
+				left: 100px;
+			}
+			&.youth_wrap{
+				left: 100px;
+			}
+		}
+		.guanplus_logo{
+			img{
+				width:@gp_w/1;
+				height:@gp_h/1;
+			}
+			bottom:450px;
+		}
+	}
+	#slide4{
+		.release_wrap{
+			right:10%;
+		}
+	}
+}
+
+@media screen and (min-width:1320px){//1366
+	#slide2{
+		.wheel{
+			width:@wheel_w/1.15;
+			height:@wheel_h/1.15;
+		}	
+	}
+}
+
+@media screen and (min-width:1400px){//1440
+	#slide3{
+		.lt_upper{
+			top:-400px;
+			width:620px;
+			height:620px;
+		}
+		.lt_lower{
+			top:-400px;
+			width:650px;
+			height:620px;
+		}
+		.rb_upper{
+			width:500px;
+			height:500px;
+			bottom:-355px;
+		}
+		.rb_lower{
+			width:500px;
+			height:500px;
+			bottom:-314px;
+		}
+	}
+}
+
+@media screen and (min-width:1540px){//1600
+	#slide2{
+		.wheel{
+			margin-left:150px;	
+		}
+	}
+	#slide3{
+		.lt_upper{
+			top:-300px;
+			width:550px;
+			height:550px;
+		}
+		.lt_lower{
+			top:-400px;
+			width:650px;
+			height:650px;
+		}
+		.lb_upper{
+			width:650px;
+			height:650px;
+			bottom:-350px;
+			background-position: left 120px top 20px;
+		}
+		.lb_lower{
+			width:780px;
+			height:900px;
+			bottom:-700px;
+		}
+		.rb_upper{
+			width:600px;
+			height:600px;
+			bottom:-555px;
+		}
+		.rb_lower{
+			width:600px;
+			height:600px;
+			bottom:-514px;
+		}
+		.rt_upper{
+			width:600px;
+			height:650px;
+			top:-300px;
+			background-position: left 120px bottom 20px;
+		}
+		.rt_lower{
+			width:550px;
+			height:550px;
+			top:-185px;
+		}
+		.news{
+			&.star_wrap{
+				left: 100px;
+			}
+			&.youth_wrap{
+				left: 100px;
+			}
+		}
+		.guanplus_logo{
+			img{
+				width:@gp_w/1;
+				height:@gp_h/1;
+			}
+			bottom:450px;
+		}
+	}
+}
+@media screen and (min-width:1850px){//1920
+	#slide3{
+		.lt_upper{
+			top:-300px;
+			width:650px;
+			height:650px;
+		}
+		.lt_lower{
+			top:-400px;
+			width:750px;
+			height:750px;
+		}
+		.lb_upper{
+			width:800px;
+			height:800px;
+			bottom:-350px;
+			background-position: left 120px top 20px;
+		}
+		.lb_lower{
+			width:930px;
+			height:1050px;
+			bottom:-700px;
+		}
+		.rb_upper{
+			width:750px;
+			height:750px;
+			bottom:-555px;
+		}
+		.rb_lower{
+			width:750px;
+			height:750px;
+			bottom:-514px;
+		}
+		.rt_upper{
+			width:750px;
+			height:800px;
+			top:-300px;
+			background-position: left 120px bottom 20px;
+		}
+		.rt_lower{
+			width:700px;
+			height:700px;
+			top:-185px;
+		}
+		.news{
+			&.star_wrap{
+				left: 150px;
+			}
+			&.youth_wrap{
+				left: 150px;
+			}
+		}
+		.guanplus_logo{
+			img{
+				width:@gp_w/1;
+				height:@gp_h/1;
+			}
+			bottom:600px;
+		}
+	}
+	// .about-us{
+		// background-position:0 50%;
+		// background-size:initial;
+	// }
+
+}
