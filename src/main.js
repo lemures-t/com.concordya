@@ -151,7 +151,7 @@ $(document).ready(function() {
 	              setInterval(function () {
 	                  $.fn.fullpage.moveSlideRight();
 	              }, 4000);
-	          },
+            },
 	        continuousVertical:true,
             controlArrows:false,
 	        verticalCentered:false,

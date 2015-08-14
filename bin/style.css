@@ -83,7 +83,7 @@ acronym {
   border: 0;
 }
 body {
-  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", "Microsoft YaHei UI", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -390,7 +390,6 @@ in order to easier position style
   height: 400px;
   position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
   overflow: hidden;
   margin: auto;
@@ -756,11 +755,10 @@ in order to easier position style
   line-height: 30px;
 }
 .odd .feature-icon-bg.active + .wrap .intro h1 {
-  font-size: 48px;
-  letter-spacing: 10px;
+  font-size: 45.6px;
 }
 .odd .feature-icon-bg.active + .wrap .intro h2 {
-  font-size: 30px;
+  font-size: 27.6px;
 }
 .odd .feature-icon-bg.active + .wrap .intro.right_wrap {
   position: relative;
@@ -883,11 +881,10 @@ in order to easier position style
   line-height: 30px;
 }
 .even .feature-icon-bg.active + .wrap .intro h1 {
-  font-size: 48px;
-  letter-spacing: 10px;
+  font-size: 45.6px;
 }
 .even .feature-icon-bg.active + .wrap .intro h2 {
-  font-size: 30px;
+  font-size: 27.6px;
 }
 .even .feature-icon-bg.active + .wrap .intro.right_wrap {
   position: relative;
@@ -913,12 +910,12 @@ in order to easier position style
   line-height: 25px;
 }
 .intro h1 {
-  font-size: 40px;
+  font-size: 38px;
   font-weight: bold;
-  letter-spacing: 10px;
 }
 .intro h2 {
-  font-size: 25px;
+  font-size: 23px;
+  margin-top: 10px;
 }
 .pic {
   width: 550px;
@@ -1134,7 +1131,6 @@ in order to easier position style
   height: 400px;
   position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
   overflow: hidden;
   margin: auto;
@@ -1160,12 +1156,10 @@ in order to easier position style
 }
 .footer .friends .wrap .head {
   font-size: 20px;
-  width: 40px;
+  width: 50px;
   color: #7D7D7D;
   font-weight: bold;
-}
-.footer .friends .wrap ul {
-  margin-left: 50px;
+  margin-right: 60px;
 }
 .footer .friends .wrap li {
   vertical-align: middle;
@@ -1216,7 +1210,6 @@ in order to easier position style
 }
 .footer .footer-main .other {
   float: right;
-  margin-right: 35px;
 }
 .footer .footer-main .other .contact span[class^="icon-"] {
   margin-right: 5px;
@@ -1235,7 +1228,7 @@ in order to easier position style
 .footer .footer-main .concordya .line {
   display: inline-block;
   height: 30px;
-  width: 420px;
+  width: 425px;
   border-bottom: 1px solid #a0a1a4;
 }
 .footer .footer-main .rcinfo {
@@ -1441,7 +1434,7 @@ Templates not for Index
   height: 100%;
   position: absolute;
   background-color: #19b8c7;
-  left: 471.5px;
+  left: 471px;
   left: 470px \9\0;
 }
 #log .top-round {
@@ -1552,7 +1545,7 @@ Templates not for Index
 #contact h1 {
   font-size: 30px;
   color: #000000;
-  font-weight: 800;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 #contact h2.seate {
@@ -1929,13 +1922,13 @@ Templates not for Index
     bottom: -700px;
   }
   #slide3 .rb_upper {
-    width: 600px;
-    height: 600px;
+    width: 650px;
+    height: 650px;
     bottom: -555px;
   }
   #slide3 .rb_lower {
-    width: 600px;
-    height: 600px;
+    width: 650px;
+    height: 650px;
     bottom: -514px;
   }
   #slide3 .rt_upper {
@@ -1966,28 +1959,28 @@ Templates not for Index
 @media screen and (min-width: 1850px) {
   #slide3 .lt_upper {
     top: -300px;
-    width: 650px;
-    height: 650px;
+    width: 600px;
+    height: 600px;
   }
   #slide3 .lt_lower {
     top: -400px;
-    width: 750px;
-    height: 750px;
+    width: 700px;
+    height: 700px;
   }
   #slide3 .lb_upper {
-    width: 800px;
-    height: 800px;
+    width: 750px;
+    height: 750px;
     bottom: -350px;
     background-position: left 120px top 20px;
   }
   #slide3 .lb_lower {
-    width: 930px;
-    height: 1050px;
+    width: 880px;
+    height: 1000px;
     bottom: -700px;
   }
   #slide3 .rb_upper {
-    width: 750px;
-    height: 750px;
+    width: 700px;
+    height: 700px;
     bottom: -555px;
   }
   #slide3 .rb_lower {
@@ -1996,14 +1989,14 @@ Templates not for Index
     bottom: -514px;
   }
   #slide3 .rt_upper {
-    width: 750px;
-    height: 800px;
+    width: 680px;
+    height: 730px;
     top: -300px;
     background-position: left 120px bottom 20px;
   }
   #slide3 .rt_lower {
-    width: 700px;
-    height: 700px;
+    width: 620px;
+    height: 620px;
     top: -185px;
   }
   #slide3 .news.star_wrap {
@@ -2013,7 +2006,7 @@ Templates not for Index
     left: 150px;
   }
   #slide3 .guanplus_logo {
-    bottom: 600px;
+    bottom: 550px;
   }
   #slide3 .guanplus_logo img {
     width: 513px;

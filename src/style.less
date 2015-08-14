@@ -46,7 +46,7 @@ abbr,acronym {
 }
 
 body{
-	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", "Microsoft YaHei UI", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing:grayscale;
 }
@@ -732,11 +732,10 @@ in order to easier position style
 					line-height:30px;
 				}
 				h1{
-					font-size:40px * 1.2;
-					letter-spacing: 10px;
+					font-size:38px * 1.2;
 				}
 				h2{
-					font-size:25px * 1.2;
+					font-size:23px * 1.2;
 				}
 				&.right_wrap{
 					position:relative;
@@ -777,12 +776,13 @@ in order to easier position style
 		line-height:25px;
 	}
 	h1{
-		font-size:40px;
+		font-size:38px;
 		font-weight:bold;
-		letter-spacing: 10px;
+		// letter-spacing: 10px;
 	}
 	h2{
-		font-size:25px;
+		font-size:23px;
+		margin-top:10px;
 	}
 	.transition(300ms,all,0ms,@animate);
 }
@@ -978,7 +978,7 @@ in order to easier position style
 		position:absolute;
 		// left:0;
 		top:0;
-		right:0;
+		// right:0;
 		bottom:0;
 		overflow:hidden;
 		margin:auto;
@@ -1005,14 +1005,15 @@ in order to easier position style
 			}
 			.head{
 				font-size:20px;
-				width:40px;
+				width:50px;
 				// line-height:30px;
 				color:#7D7D7D;
 				font-weight:bold;
+				margin-right:60px;
 			}				
-			ul{
-				margin-left:50px;
-			}
+			// ul{
+			// 	margin-left:50px;
+			// }
 			li{
 				vertical-align:middle;
 				margin-right:55px;
@@ -1054,6 +1055,7 @@ in order to easier position style
 			li{
 				margin-right:40px;
 				width:70px;
+				// font-weight:600;
 			}
 			.detail{
 				display:block;	
@@ -1067,7 +1069,7 @@ in order to easier position style
 		}
 		.other{
 			float:right;
-			margin-right:35px;
+			// margin-right:35px;
 			.contact{
 			// float:left;
 				span[class^="icon-"]{
@@ -1088,7 +1090,7 @@ in order to easier position style
 			.line{
 				display:inline-block;
 				height:30px;
-				width:420px;
+				width:425px;
 				border-bottom:1px solid @secondary-color-2;
 			}
 		}
@@ -1401,7 +1403,7 @@ Templates not for Index
 		height:100%;
 		position:absolute;
 		background-color:@fe-color;
-		left:471.5px;
+		left:471px;
 		left:470px \9\0;
 		// z-index:-1;
 	}
@@ -1524,7 +1526,7 @@ Templates not for Index
 	h1{
 		font-size:30px;
 		color:#000000;
-		font-weight:800;
+		font-weight:bold;
 		margin-bottom:20px;
 	}
 	h2.seate{
