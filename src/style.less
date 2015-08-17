@@ -73,6 +73,25 @@ body{
 	padding-top:@top-nav-height;//for fixed top nav
 }
 
+.plus{
+	font-size:12px;
+	position:relative;
+	top:-8px;
+	left:-3px;
+}
+.plus_inlog{
+	font-size:10px;
+	left:-4px;
+}
+.plus_intitle{
+	left:-5px;
+	top:-12px;
+}
+.plus_head{
+	font-size:22px;
+	left:0px;
+}
+
 .mask_pattern(@opacity,@bg-type,@bg-style){
 	opacity: @opacity;
 	@{bg-type}:@bg-style;
@@ -1016,7 +1035,7 @@ in order to easier position style
 			// }
 			li{
 				vertical-align:middle;
-				margin-right:55px;
+				margin-right:45px;
 				span{
 					display:none;		
 				}
@@ -1029,6 +1048,9 @@ in order to easier position style
 			}
 			#icon-dream{
 				height:50px;
+			}
+			#icon-fangcloud{
+				height:40px;
 			}
 
 		}
@@ -1113,13 +1135,14 @@ Templates not for Index
 .banner{
 	box-sizing:border-box;
 	width:100%;
-	height:308px;
+	// height:308px;
+	height:378px;
 	text-align:center;
-	padding-top:120px;
+	padding-top:150px;
 	position:relative;
 	h1{
 		color:#ffffff;
-		font-size:25px;
+		font-size:30px;
 		letter-spacing:3px;
 		position:relative;
 		z-index:2;
@@ -1173,7 +1196,7 @@ Templates not for Index
 /* Guidance Page */
 // background-image: lin。ear-gradient(-180deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.10) 100%);
 .guidance{
-	background:url('@{url}/assets/guidance_bg.png') no-repeat top right;
+	background:url('@{url}/assets/guidance_bg.png') no-repeat top 70px right;
 	background-size:cover;
 	background-color:@bg-color;
 	// height:308;
@@ -1389,7 +1412,7 @@ Templates not for Index
 /* About-us Page*/
 .about-us{
 	background:url('@{url}/assets/about_us_bg.png') no-repeat left top;
-	// background-size:cover;
+	background-size:cover;
 	background-color:@bg-color;
 	.mask{
 		.mask_pattern(0.4,background-color,#000000)

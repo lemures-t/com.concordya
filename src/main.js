@@ -41,24 +41,6 @@ $(document).ready(function() {
     tab_content_access.each(function(index,ele){
         $(ele).on('click',function(){
             var href = $(this).attr('href');
-            var matched = href.match(/(.*?)\#\_(.*)/);
-
-            if (matched){
-                var tab_content_id = matched[2];
-                var tab_content = $("#"+tab_content_id);
-                var tab = $("#"+tab_content_id+'-tab');
-                //handle when in pages with class=tab
-                if ($('.tab')){
-                    $('.tab').eq(0).find('.active').removeClass('active');
-                    tab.addClass('active');
-                    $('.tab_content').eq(0).find('.active').removeClass('active');
-                    tab_content.addClass('active');
-                }
-                //handle when in pages without class=tab
-                    //else{}
-                //direct to the tab hash address
-                    //call ripple method
-            }
         });
     });
     /* SWITCH TAB-S CONTENT*/
@@ -117,6 +99,69 @@ $(document).ready(function() {
     feel.on('mouseout',function(){
         btn.removeClass('hover');
     });
+
+    /* HASH ROUTER*/
+    var Router = {};
+    /*
+
+    */
+    Router.reg = function(pageName,hash,deft,handler){
+        if (!Router[pageName]){
+            Router[pageName] = [];
+        }
+        if (typeof hash == 'string'){
+            Router[pageName].push(hash);    
+        }
+        else if ( hash instanceof Array){
+            Router[pageName] = Router[pageName].concat(hash);
+        }
+        if (typeof deft == 'string'){
+            Router[pageName].push(deft);   
+        }
+
+        var rep = new RegExp(pageName);
+        //handle hashchange
+        $(window).on('hashchange',function(){
+            if (rep.test(window.location.href)){
+                var _hash = window.location.hash.replace(/#_/,'');
+                if(_hash){
+                    handler(_hash);
+                }
+                else{
+                    var _hash = deft.replace('_','');
+                    handler(_hash);
+                }
+            }
+        });
+        //handle the page with a hash url and the page is directed from other pages
+        //resolve UA history problem
+        $(window).on('load',function(){
+            if (rep.test(window.location.href)){
+                var _hash = window.location.hash.replace(/#_/,'');
+                if(_hash){
+                    handler(_hash);
+                }
+            }
+        });
+    };
+
+    Router.reg('about-us',['_news','_media','_contact','_log'],'_news',function(hash){
+        var tab_content_id = hash;
+        var tab_content = $("#"+tab_content_id);
+        var tab = $("#"+tab_content_id+'-tab');
+        //handle when in pages with class=tab
+        if ($('.tab')){
+            $('.tab').eq(0).find('.active').removeClass('active');
+            tab.addClass('active');
+            $('.tab_content').eq(0).find('.active').removeClass('active');
+            tab_content.addClass('active');
+        }
+    });
+    
+
+
+
+
     /*METHOD OF TOGGLING ELEMENT'S ACTIVE CONDITION*/
     var toggle = function(ele){
         if (ele.hasClass('active')){
@@ -150,7 +195,7 @@ $(document).ready(function() {
 	    	afterRender: function () {
 	              setInterval(function () {
 	                  $.fn.fullpage.moveSlideRight();
-	              }, 4000);
+	              }, 3000);
             },
 	        continuousVertical:true,
             controlArrows:false,
