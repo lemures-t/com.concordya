@@ -103,7 +103,6 @@ $(document).ready(function() {
     /* HASH ROUTER*/
     var Router = {};
     /*
-
     */
     Router.reg = function(pageName,hash,deft,handler){
         if (!Router[pageName]){

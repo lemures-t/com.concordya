@@ -1181,7 +1181,7 @@ in order to easier position style
 }
 .footer .friends .wrap li {
   vertical-align: middle;
-  margin-right: 45px;
+  margin-right: 30px;
 }
 .footer .friends .wrap li span {
   display: none;
@@ -1197,6 +1197,9 @@ in order to easier position style
 }
 .footer .friends .wrap #icon-fangcloud {
   height: 40px;
+}
+.footer .friends .wrap #icon-easemob {
+  height: 25px;
 }
 .footer .footer-main {
   height: 450px;
