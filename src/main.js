@@ -143,7 +143,7 @@ $(document).ready(function() {
             }
         });
     };
-    Router.view = function(url,handler){
+    Router.view = function(url,deft,handler){
         Router['default'] = Router['default'] || [];
 
 
@@ -162,12 +162,16 @@ $(document).ready(function() {
             
             if (url.indexOf(_url) != -1){
                 handler(_url);
-            }  
+            } 
+            else{
+                Router['default'].push(deft);
+                handler(deft);
+            }
 
         });
     };
 
-    Router.view(['about-us','index','guidance'],function(para_url){
+    Router.view(['about-us','index','guidance'],'index',function(para_url){
         var direction = para_url+'.html';
         $('#menu').find('.active').removeClass('active');
         $('#menu a[href="'+ direction +'"]').parent().addClass('active');
