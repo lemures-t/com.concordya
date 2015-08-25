@@ -114,6 +114,11 @@ body {
   font-size: 22px;
   left: 0px;
 }
+.plus_footer {
+  font-size: 10px;
+  top: -8px;
+  left: 0px;
+}
 .wrap {
   margin: 0 auto;
   width: 960px;
@@ -405,7 +410,7 @@ in order to easier position style
   width: 100%;
 }
 .slide .wrap .vertical-wrap {
-  height: 400px;
+  height: 410px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1146,7 +1151,7 @@ in order to easier position style
 }
 /*footer*/
 .wrap .vertical-wrap {
-  height: 400px;
+  height: 410px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1243,7 +1248,7 @@ in order to easier position style
   margin-top: 25px;
 }
 .footer .footer-main .concordya {
-  margin-top: 45px;
+  margin-top: 25px;
   text-align: center;
 }
 .footer .footer-main .concordya > * {
@@ -1256,7 +1261,7 @@ in order to easier position style
   border-bottom: 1px solid #a0a1a4;
 }
 .footer .footer-main .rcinfo {
-  margin-top: 45px;
+  margin-top: 25px;
   color: #c9c9c9;
   text-align: center;
   font-size: 12px;
@@ -1459,7 +1464,7 @@ Templates not for Index
   height: 100%;
   position: absolute;
   background-color: #19b8c7;
-  left: 471px;
+  left: 471.5px;
   left: 470px \9\0;
 }
 #log .top-round {

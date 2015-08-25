@@ -67,7 +67,7 @@ Concordya Design Element
 @top-nav-height:68px;
 @content-fs:16px;//15px
 @url:"../src";//dev:"../src" build:"..""
-@url_img:"../src";//dev:"../src" build:"../dist""
+@url_img:"../src";//dev:"../src" build:"../src""
 
 body{
 	padding-top:@top-nav-height;//for fixed top nav
@@ -89,6 +89,11 @@ body{
 }
 .plus_head{
 	font-size:22px;
+	left:0px;
+}
+.plus_footer{
+	font-size:10px;
+	top: -8px;
 	left:0px;
 }
 
@@ -993,7 +998,7 @@ in order to easier position style
 /*footer*/
 .wrap{
 	.vertical-wrap{
-		height:400px;
+		height:410px;
 		position:absolute;
 		// left:0;
 		top:0;
@@ -1107,7 +1112,7 @@ in order to easier position style
 			}	
 		}	
 		.concordya{
-			margin-top:45px;
+			margin-top:25px;
 			text-align:center;
 			> *{
 				vertical-align:middle;
@@ -1120,7 +1125,7 @@ in order to easier position style
 			}
 		}
 		.rcinfo{
-			margin-top:45px;
+			margin-top:25px;
 			color:#c9c9c9;
 			text-align:center;
 			font-size:12px;
@@ -1429,7 +1434,8 @@ Templates not for Index
 		height:100%;
 		position:absolute;
 		background-color:@fe-color;
-		left:471px;
+		// left:471px;
+		left:471.5px;
 		left:470px \9\0;
 		// z-index:-1;
 	}

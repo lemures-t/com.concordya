@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<%- include ../tpl/header %>
+	<!-- dev:css -->
+	<!-- endinject -->
+	<!-- release-lib:css -->
+	<!-- endinject -->
+	<!-- release:css -->
+	<!-- endinject -->
+</head>
+<body>
+	<%- include ../tpl/nav %>
+	<div class="guidance banner">
+		<div class="mask"></div>
+		<h1 class="title">懂机器学习的财务云，管理随心，享受飞一般的自由</h1>
+	</div>
+	<div class="guidance-content">
+		<div class="basic">
+			<div class="wrap">
+				<h1>产品用户指南－基础操作</h1>
+				<p>基本操作页面共分为四个标签：首页，财务管理，报表和基础设置</p>
+				<img class="introduction" src="<%= url %>/assets/introduction.png" alt="intro" />
+				<img class="main" src="<%= url %>/assets/main.png" alt="intro" />
+			</div>
+		</div>
+		<div class="specs">
+				<h1>管＋会根据企业内的不同职责开通相应权限</h1>
+				<p>目前系统支持三个主要用户角色：财务，总经理和管理员</p>
+				<ul class="tab-s top">
+					<li class="active finance-tab">财务</li>
+					<li class="director-tab">总经理</li>
+					<li class="admin-tab">管理员</li>
+				</ul>
+				<div class="tab-content-s">
+					<div class="active" id="finance">
+						<h2>财务角色主要功能简介</h2>
+						<div class="odd">
+							<div class="wrap">
+							<img src="<%= url %>/assets/finance-1.png" />
+							</div>
+						</div>
+						<div class="even">
+							<div class="wrap">
+							<img src="<%= url %>/assets/finance-2.png" />
+							</div>
+						</div>
+						<div class="odd">
+							<div class="wrap">
+							<img src="<%= url %>/assets/finance-3.png"  />
+							</div>
+						</div>
+					</div>
+					<div id="director">
+						<h2>总经理角色主要功能简介</h2>
+						<div class="odd">
+							<div class="wrap">
+							<img src="<%= url %>/assets/director.png" />
+							</div>
+						</div>
+					</div>
+					<div id="admin">
+						<h2>管理员角色主要功能简介</h2>
+						<div class="odd">
+							<div class="wrap">
+							<img src="<%= url %>/assets/admin-1.png" />
+							</div>
+						</div>
+						<div class="even">
+							<div class="wrap">
+							<img src="<%= url %>/assets/admin-2.png" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="tab-s bottom">
+					<li class="active finance-tab">财务</li>
+					<li class="director-tab">总经理</li>
+					<li class="admin-tab">管理员</li>
+				</ul>
+		</div>
+	</div>
+	<div class="footer general">
+		<%- include ../tpl/friends %>
+		<%- include ../tpl/footer %>
+	</div>
+	<!-- dev-jq:js -->
+	<!-- endinject -->
+	
+	<!-- dev:js -->
+	<!-- endinject -->
+
+	<!-- release-lib:js -->
+	<!-- endinject -->
+	
+	<!-- release:js -->
+	<!-- endinject -->
+
+</body>
+</html>

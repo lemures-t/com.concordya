@@ -143,6 +143,38 @@ $(document).ready(function() {
             }
         });
     };
+    Router.view = function(url,handler){
+        Router['default'] = Router['default'] || [];
+
+
+        if ( url instanceof Array){
+            Router['default'] = Router['default'].concat(url);
+        }
+        var _href = window.location.href,
+            matched,
+            _url;
+        $(window).on('load',function(){
+
+            matched = _href.match(/(.*)\/(.*?)\.html/);
+            if (!!matched){
+                _url = matched[2]; 
+            }
+            
+            if (url.indexOf(_url) != -1){
+                handler(_url);
+            }  
+
+        });
+    };
+
+    Router.view(['about-us','index','guidance'],function(para_url){
+        var direction = para_url+'.html';
+        $('#menu').find('.active').removeClass('active');
+        $('#menu a[href="'+ direction +'"]').parent().addClass('active');
+    });
+
+
+
 
     Router.reg('about-us',['_news','_media','_contact','_log'],'_news',function(hash){
         var tab_content_id = hash;
