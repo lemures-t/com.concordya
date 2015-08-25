@@ -22,14 +22,19 @@ Versions that have important updates are listed.
 4. V 2.1.0
 	* Hash Router Function Added
 	* Layout: Banner Height Extend
-	* Normal Content Update
+	* Regular Content Update
+
+5. v 2.2.0
+	* Router Function extended to view change
+	* Restructure HTML Orgnization with EJS Template
+	* Regular Content Update
 
 # TODOS
 1. Protimize Main.JS Espcially The Structure of the Code or Try OOP
 2. Portimize Website Loading Efficiency Via
 	* CSS Sprites in Index Page
 	* Lazy Loading with Reference to Echo.js
-3. Try JS Template
+3. Try JS Template (DONE)
 
 
 
