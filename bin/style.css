@@ -1230,6 +1230,9 @@ in order to easier position style
   margin-right: 40px;
   width: 70px;
 }
+.footer .footer-main .sitemap li > a {
+  color: #ffffff;
+}
 .footer .footer-main .sitemap .detail {
   display: block;
 }
