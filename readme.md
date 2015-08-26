@@ -30,7 +30,7 @@ Versions that have important updates are listed.
 	* Regular Content Update
 
 # TODOS
-1. Protimize Main.JS Espcially The Structure of the Code or Try OOP
+1. Protimize Main.JS Espcially The Structure of the Code or Try OOP (DONE)
 2. Portimize Website Loading Efficiency Via
 	* CSS Sprites in Index Page
 	* Lazy Loading with Reference to Echo.js
