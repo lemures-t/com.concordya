@@ -1,5 +1,4 @@
 (function(){
-$(document).ready(function() {
 
     var Concordya = function(){
         this.router = {};
@@ -204,99 +203,101 @@ $(document).ready(function() {
         }
     };
 
-    var web = new Concordya();
+    $(document).ready(function() {
 
-    web.fpInit(web.fpOptions);
+        var web = new Concordya();
 
-    /*feature-icon-bg POSITION INITIAL*/
-    web.posInit();
+        web.fpInit(web.fpOptions);
 
-    /* #FEEL CLICK EVENT*/
-    web.toggleHover('#top-nav .btn','#feel','hover');
+        /*feature-icon-bg POSITION INITIAL*/
+        web.posInit();
 
-    /* 
-    * Ripple Menu <A /> and Ripple Tab <A />
-    * WITH CHANGE OF HREF
-    */
-    web.addListener($.merge($('a','#menu'),$('a','.tab')),'click',web.ripple_Handler);
+        /* #FEEL CLICK EVENT*/
+        web.toggleHover('#top-nav .btn','#feel','hover');
 
-    /* SWITCH TAB-S CONTENT*/
-    web.addListener('.tab-s > li','click',function(){
-        var ele = $(this);
-        var matched = ele.attr('class').match(/(.*?)\-tab/);
-        var related;
-        // handle click tab on top
-        if (ele.parent().hasClass('top')){
-            related = $('.bottom').find('.'+matched[0]);
-            if (!related.hasClass('active')){
-                $('.bottom').find('.active').removeClass('active');
-                related.addClass('active');
-                if (!ele.hasClass('active')){
-                    ele.parent().find('.active').removeClass('active');
-                    ele.addClass('active');
-                    var target = '#' + matched[1];
-                    $(target).parent().find('.active').removeClass('active');
-                    $(target).addClass('active');
+        /* 
+        * Ripple Menu <A /> and Ripple Tab <A />
+        * WITH CHANGE OF HREF
+        */
+        web.addListener($.merge($('a','#menu'),$('a','.tab')),'click',web.ripple_Handler);
+
+        /* SWITCH TAB-S CONTENT*/
+        web.addListener('.tab-s > li','click',function(){
+            var ele = $(this);
+            var matched = ele.attr('class').match(/(.*?)\-tab/);
+            var related;
+            // handle click tab on top
+            if (ele.parent().hasClass('top')){
+                related = $('.bottom').find('.'+matched[0]);
+                if (!related.hasClass('active')){
+                    $('.bottom').find('.active').removeClass('active');
+                    related.addClass('active');
+                    if (!ele.hasClass('active')){
+                        ele.parent().find('.active').removeClass('active');
+                        ele.addClass('active');
+                        var target = '#' + matched[1];
+                        $(target).parent().find('.active').removeClass('active');
+                        $(target).addClass('active');
+                    }
                 }
             }
-        }
-        // handle click tab on bottom
-        else{
-            related = $('.top').find('.'+matched[0]);
-            if (!related.hasClass('active')){
-                $('.top').find('.active').removeClass('active');
-                related.addClass('active');
-                // scrollback with animation and delay toggle of tab-content
-                // 68 is the fixed navbar height as well as the body padding-top value
-                var scrollback = $('.specs').offset().top - 68;
+            // handle click tab on bottom
+            else{
+                related = $('.top').find('.'+matched[0]);
+                if (!related.hasClass('active')){
+                    $('.top').find('.active').removeClass('active');
+                    related.addClass('active');
+                    // scrollback with animation and delay toggle of tab-content
+                    // 68 is the fixed navbar height as well as the body padding-top value
+                    var scrollback = $('.specs').offset().top - 68;
 
-                var root = $(document.body).scrollTop()?$(document.body):$(document.documentElement);
-                root.animate({scrollTop: scrollback},600).promise().done(function(){
-                    setTimeout(function(){
-                        if (!ele.hasClass('active')){
-                            ele.parent().find('.active').removeClass('active');
-                            ele.addClass('active');
-                            var target = '#' + matched[1];
-                            $(target).parent().find('.active').removeClass('active');
-                            $(target).addClass('active');
-                        }
-                    },300);
-                });
+                    var root = $(document.body).scrollTop()?$(document.body):$(document.documentElement);
+                    root.animate({scrollTop: scrollback},600).promise().done(function(){
+                        setTimeout(function(){
+                            if (!ele.hasClass('active')){
+                                ele.parent().find('.active').removeClass('active');
+                                ele.addClass('active');
+                                var target = '#' + matched[1];
+                                $(target).parent().find('.active').removeClass('active');
+                                $(target).addClass('active');
+                            }
+                        },300);
+                    });
+                }
             }
-        }
-    });
+        });
 
-    /* SITEMAP SCROLLBACK */
-    web.addListener('.sitemap .detail.more a','click',function(e){
-        e.preventDefault();
-        if ($('.tab').length!==0){
-            var sb = web.scrollBack('.tab') - 88;
-            setTimeout(function(){
-                web.getRoot().animate({scrollTop: sb},600);
-            },200);    
-        }
-        window.location.href = $(this).attr('href');
-    });
+        /* SITEMAP SCROLLBACK */
+        web.addListener('.sitemap .detail.more a','click',function(e){
+            e.preventDefault();
+            if ($('.tab').length!==0){
+                var sb = web.scrollBack('.tab') - 88;
+                setTimeout(function(){
+                    web.getRoot().animate({scrollTop: sb},600);
+                },200);    
+            }
+            window.location.href = $(this).attr('href');
+        });
 
-    /* Router BTW DIFFERENT VIEWS */
-    web.routerView(['about-us','index','guidance'],'index',function(para_url){
-        var direction = para_url+'.html';
-        $('#menu').find('.active').removeClass('active');
-        $('#menu a[href="'+ direction +'"]').parent().addClass('active');
-    });
+        /* Router BTW DIFFERENT VIEWS */
+        web.routerView(['about-us','index','guidance'],'index',function(para_url){
+            var direction = para_url+'.html';
+            $('#menu').find('.active').removeClass('active');
+            $('#menu a[href="'+ direction +'"]').parent().addClass('active');
+        });
 
-    /* Router BTW DIFFERENT HASH UNDER SAME PAGE */
-    web.routerHash('about-us',['_news','_media','_contact','_log'],'_news',function(hash){
-        var tab_content_id = hash;
-        var tab_content = $("#"+tab_content_id);
-        var tab = $("#"+tab_content_id+'-tab');
-        //handle when in pages with class=tab
-        if ($('.tab')){
-            $('.tab').eq(0).find('.active').removeClass('active');
-            tab.addClass('active');
-            $('.tab_content').eq(0).find('.active').removeClass('active');
-            tab_content.addClass('active');
-        }
+        /* Router BTW DIFFERENT HASH UNDER SAME PAGE */
+        web.routerHash('about-us',['_news','_media','_contact','_log'],'_news',function(hash){
+            var tab_content_id = hash;
+            var tab_content = $("#"+tab_content_id);
+            var tab = $("#"+tab_content_id+'-tab');
+            //handle when in pages with class=tab
+            if ($('.tab')){
+                $('.tab').eq(0).find('.active').removeClass('active');
+                tab.addClass('active');
+                $('.tab_content').eq(0).find('.active').removeClass('active');
+                tab_content.addClass('active');
+            }
+        });
     });
-});
 })($);
