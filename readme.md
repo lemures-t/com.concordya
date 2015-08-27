@@ -28,6 +28,11 @@ Versions that have important updates are listed.
 	* Router Function extended to view change
 	* Restructure HTML Orgnization with EJS Template
 	* Regular Content Update
+6. v 2.2.5
+	* Main.JS restructure with OOP;
+	* Footer sitemap anchor direction and animation function added
+	* .gitignore Modified;
+	* Regular Content Update;
 
 # TODOS
 1. Protimize Main.JS Espcially The Structure of the Code or Try OOP
