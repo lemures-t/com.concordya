@@ -1,4 +1,4 @@
-/bin/*
-/bower_components/*
-/node_modules/*
-/dist/*
+/bin/
+/bower_components/
+/node_modules/
+/dist/
