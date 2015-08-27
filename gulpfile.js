@@ -9,9 +9,8 @@ var gulp = require('gulp'),
 	lib_source = ['./bower_components/fullpage.js/jquery.fullPage.min.js',
 				'./bower_components/fullpage.js/jquery.fullPage.css',
 				'./bower_components/jquery/jquery.min.js',
-				'./bower_components/jquery/jquery.min.map',
-				'./bower_components/fontello-9f96e693/fontello.css'],
-	font_source = './bower_components/fontello-9f96e693/font/*';
+				'./bower_components/jquery/jquery.min.map'];
+	// font_source = './bower_components/fontello-9f96e693/font/*';
 
 gulp.task('sprite',function(){
 	return sprity.src({
@@ -97,16 +96,16 @@ gulp.task('default',['server','watch','init_html'],function(){
 	});
 
 	gulp.task('clean:lib',function(){
-		del.sync(['./lib/*']);
+		del.sync(['./lib/*','!./lib/font','!./lib/fontello.css']);
 	});
 
 	gulp.task('init_lib',['clean:lib'],function(){
-		return es.concat(
-			gulp.src(lib_source)
-				.pipe(gulp.dest('./lib')),
-			gulp.src(font_source)
-				.pipe(gulp.dest('./lib/font'))
-		);
+		// return es.concat(
+		return gulp.src(lib_source)
+				.pipe(gulp.dest('./lib'));
+			// gulp.src(font_source)
+				// .pipe(gulp.dest('./lib/font'))
+		// );
 		
 	});
 

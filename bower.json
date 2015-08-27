@@ -19,7 +19,6 @@
   ],
   "dependencies": {
     "jquery": "1.9.1",
-    "fullpage.js": "~2.6.7",
-    "fontawesome": "~4.4.0"
+    "fullpage.js": "2.6.7"
   }
 }
