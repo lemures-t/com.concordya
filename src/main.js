@@ -9,7 +9,7 @@
             afterRender: function () {
                   setInterval(function () {
                       $.fn.fullpage.moveSlideRight();
-                  }, 3000);
+                  }, 5000);
             },
             continuousVertical:true,
             controlArrows:false,
