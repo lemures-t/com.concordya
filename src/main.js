@@ -191,16 +191,16 @@
             }
         },
         /* #FEEL EVENT*/
-        toggleHover: function(target,trigger,triggerClass){
-            var _trigger = $(trigger);
-            var _target = $(target);
-            _trigger.on('mouseover',function(){
-                _target.addClass(triggerClass);
-            });
-            _trigger.on('mouseout',function(){
-                _target.removeClass(triggerClass);
-            });
-        }
+        // toggleHover: function(target,trigger,triggerClass){
+        //     var _trigger = $(trigger);
+        //     var _target = $(target);
+        //     _trigger.on('mouseover',function(){
+        //         _target.addClass(triggerClass);
+        //     });
+        //     _trigger.on('mouseout',function(){
+        //         _target.removeClass(triggerClass);
+        //     });
+        // }
     };
 
     $(document).ready(function() {
@@ -213,7 +213,7 @@
         web.posInit();
 
         /* #FEEL CLICK EVENT*/
-        web.toggleHover('#top-nav .btn','#feel','hover');
+        // web.toggleHover('#top-nav .btn','#feel','hover');
 
         /* 
         * Ripple Menu <A /> and Ripple Tab <A />

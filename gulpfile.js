@@ -16,7 +16,7 @@ gulp.task('sprite',function(){
 	return sprity.src({
     			src: './src/assets/head/*.png',
     			style: './sprite.css',
-    			order:false
+    			sort: false
   			})
 			.pipe(gulp.dest('./'));
 });
