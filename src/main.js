@@ -1,31 +1,9 @@
 (function(){
 
-    var Concordya = function(){
+    var Concordya = function(options){
+        this.autoID;
         this.router = {};
-        this.fpOptions = {
-            // anchors:['first','second','third','fourth'],
-            // menu:'#menu',
-            slidesNavigation:true,
-            afterRender: function () {
-                  setInterval(function () {
-                      $.fn.fullpage.moveSlideRight();
-                  }, 5000);
-            },
-            continuousVertical:true,
-            controlArrows:false,
-            verticalCentered:false,
-            // verticalCentered: true,
-            paddingTop:68,
-            scrollingSpeed:700,
-            autoScrolling:false,
-
-            // fitToSection:false,
-            // navigationTooltips: ['firstSlide', '随手记'],
-            // navigation: true,
-            // afterResize: adaption,
-            // sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000']
-            onLeave: Concordya.changeFeatureBG
-        };
+        this.fpOptions = options;
     };
     /* Static Method that control the condition of feautre-bg when scrolling*/
     Concordya.changeFeatureBG = function(index, nextIndex){
@@ -82,7 +60,9 @@
         constructor: Concordya,
         fpInit: function(options){
             if ($('#fullpage').length!==0){
-                $('#fullpage').fullpage(options);    
+                $('#fullpage').fullpage(options);
+                 /* Call Slide Carousel*/
+                this.setCarousel(5000);
             }
         },
        
@@ -201,12 +181,47 @@
         //         _target.removeClass(triggerClass);
         //     });
         // }
+        /*Slide Set Carousel Function*/
+        setCarousel:function(time){
+            this.autoID = setInterval(function () {
+                $.fn.fullpage.moveSlideRight();
+            }, time);
+        },
+        /*Slide Stop Carosousel Function*/
+        cancelCarousel: function(){
+            clearInterval(this.autoID);
+        }
     };
 
     $(document).ready(function() {
 
-        var web = new Concordya();
+        var options = {
+            // anchors:['first','second','third','fourth'],
+            // menu:'#menu',
+            slidesNavigation:true,
+            // afterRender: function () {
+            //      return setInterval(function () {
+            //           $.fn.fullpage.moveSlideRight();
+            //       }, 5000);
+            // },
+            continuousVertical:true,
+            controlArrows:false,
+            verticalCentered:false,
+            // verticalCentered: true,
+            paddingTop:68,
+            scrollingSpeed:700,
+            autoScrolling:false,
 
+            // fitToSection:false,
+            // navigationTooltips: ['firstSlide', '随手记'],
+            // navigation: true,
+            // afterResize: adaption,
+            // sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000']
+            onLeave: Concordya.changeFeatureBG
+        };
+
+        var web = new Concordya(options);
+        
         web.fpInit(web.fpOptions);
 
         /*feature-icon-bg POSITION INITIAL*/
@@ -277,6 +292,16 @@
                 },200);    
             }
             window.location.href = $(this).attr('href');
+        });
+
+        /* SLIDE 2 ANDROID JUMPOUT BOX */
+        web.addListener('.android_button','click',function(){
+            $('.qr_wrap').css({'display':'block'});
+            web.cancelCarousel();
+        });
+        web.addListener('.turn_off','click',function(){
+            $('.qr_wrap').css({'display':'none'});
+            web.setCarousel(5000);
         });
 
         /* Router BTW DIFFERENT VIEWS */
